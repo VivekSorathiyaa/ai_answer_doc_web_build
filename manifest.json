@@ -1,6 +1,6 @@
 {
-    "name": "ai_document_app",
-    "short_name": "ai_document_app",
+    "name": "ai_web_application",
+    "short_name": "ai_web_application",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
