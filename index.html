@@ -3,10 +3,17 @@
 <head>
   <base href="/">
   <meta charset="UTF-8">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <title>Answer PDF</title>
+  <link rel="manifest" href="manifest.json" >
+
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
+  <meta name="google-signin-client_id" content="862240061332-70mao534v28gsv9pjp3id2sgolh5g1g1.apps.googleusercontent.com">
 
   <!-- Firebase scripts -->
   <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js"></script>
@@ -39,7 +46,35 @@
   <!-- Main Dart script -->
   <script defer src="main.dart.js"></script>
 
+  <style>
+    /* Style for splash screen */
+    body {
+      margin: 0;
+      background-color: #000000; /* Dark black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Logo styling */
+    #splash-logo {
+      width: 200px; /* Adjust size as needed */
+      height: 200px;
+    }
+  </style>
+
 </head>
 <body>
+<!-- Splash Screen Logo -->
+<img id="splash-logo" src="assets/images/tab_logo.png" alt="Logo">
+<link rel="icon" type="image/png" href="assets/images/tab_logo.png"> <!-- Adjust path if needed -->
+
+<script>
+  // Remove the splash logo once Flutter app has loaded
+  window.addEventListener('load', (event) => {
+    document.getElementById('splash-logo').style.display = 'none';
+  });
+</script>
 </body>
 </html>
